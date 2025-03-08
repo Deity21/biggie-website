@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light and Dark Theme */
+:root {
+    --primary-bg: #ffffff;
+    --primary-text: #000000;
+    --secondary-bg: #f7f7f7;
+    --button-bg: #000000;
+    --button-text: #ffffff;
+}
+
+.dark-theme {
+    --primary-bg: #1e1e1e;
+    --primary-text: #ffffff;
+    --secondary-bg: #333;
+    --button-bg: #e0c460;
+    --button-text: #333;
+}
+
+body {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: var(--secondary-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--button-bg);
+}
+
+.theme-toggle {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background: url('herobg.webp') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+}
+
+.hero {
+    position: relative;
+    z-index: 1; /* Ensures text appears above the background */
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--primary-text);
+    color: var(--primary-bg);
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item img, .portfolio-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item img:hover, .portfolio-item video:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+}
+
+.testimonial {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 280px;
+    scroll-snap-align: start;
+    text-align: left;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial .name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.testimonial .stars {
+    color: gold;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid var(--primary-text);
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Consultation Section Styling */
+.consultation-section {
+    text-align: center;
+    padding: 80px 10%;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+
+.consultation-section h2 {
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+.consultation-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.consultation-button {
+    padding: 15px 30px;
+    background: #e0c460;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.consultation-button:hover {
+    background: #900;
+}
+
+/* Pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-bg);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .hero-section {
+        padding: 50px 20px;
+        height: auto;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .testimonial {
+        min-width: 100%;
+    }
+    section {
+        padding: 50px 5%;
+    }
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}

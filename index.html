@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Decor Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DesignHaven</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#consultation-section fade-in">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" onclick="toggleTheme()"></div>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero-section">
+        <div class="hero">
+            <h1>Transforming Spaces with Elegance</h1>
+            <p>Minimalistic & Modern Designs Tailored for You</p>
+            <a href="#portfolio" class="cta-button">View Portfolio</a>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="fade-in">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="port1.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port2.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port3.jpg" alt="Interior Design 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="port4.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port5.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port6.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port7.jpg" alt="Interior Design 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="port8.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="port9.jpg" alt="Interior Design 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio10.jpg" alt="Interior Design 1">
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="testimonials" class="fade-in">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Absolutely stunning designs! My home has never looked better."</p>
+                <div class="name">- Sarah J.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Incredible attention to detail. Highly recommended!"</p>
+                <div class="name">- Michael T.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Loved the transformation. Great work!"</p>
+                <div class="name">- Emma R.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Simply beautiful and elegant. Will hire again!"</p>
+                <div class="name">- James L.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Professional and creative. Loved every detail."</p>
+                <div class="name">- Olivia W.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Their work is pure art. Absolutely breathtaking!"</p>
+                <div class="name">- Daniel K.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"A dream come true. My space feels like a luxury suite!"</p>
+                <div class="name">- Sophia M.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Exceeded my expectations. So grateful!"</p>
+                <div class="name">- Ethan B.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Creative, stylish, and worth every penny."</p>
+                <div class="name">- Mia C.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial">
+                <p>"Best decision I made for my home. 100% satisfied!"</p>
+                <div class="name">- Lucas P.</div>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class='consultation-section fade-in'>
+        <h2>LET'S TALK ABOUT YOUR INTERIORS</h2>
+        <p>Book a consultation with our experts to bring your dream space to life.</p>
+        <button class='consultation-button' onclick='redirectToContact()'>BOOK A CONSULTATION</button>
+    </section>
+    <section class='about-section fade-in'>
+        <p><strong>At DesignHaven by Abekeade,</strong> we're passionate about crafting extraordinary spaces that reflect our clients' unique personalities and styles. With a presence in Lagos and Abuja, our talented team brings creativity and expertise to every project, from contemporary to traditional designs. We're dedicated to transforming spaces into breathtaking works of art that inspire and delight.</p>
+    </section>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Sign up for exclusive interior design tips!</p>
+            <input type="email" placeholder="Enter your email">
+            <button onclick="closePopup()">Subscribe</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 DesignHaven. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
