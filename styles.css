@@ -271,31 +271,33 @@ button {
 }
 
 /* Responsive Design */
+/* Mobile-Friendly Navigation */
 @media screen and (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        background: #222;
-        padding: 15px 0;
-        position: relative;
+        padding: 10px 20px;
+        background: var(--secondary-bg);
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 1000;
     }
     
     .logo {
-        font-size: 28px;
+        font-size: 22px;
         font-weight: bold;
         color: white;
     }
     
     .menu-toggle {
-        font-size: 24px;
+        font-size: 22px;
         cursor: pointer;
-        color: white;
+        color: var(--button-bg);
         background: none;
         border: none;
-        position: absolute;
-        right: 20px;
-        top: 15px;
     }
     
     nav ul {
@@ -304,7 +306,7 @@ button {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background: #333;
+        background: var(--secondary-bg);
         padding: 10px 0;
         position: absolute;
         top: 50px;
@@ -318,15 +320,15 @@ button {
     
     nav ul li a {
         text-decoration: none;
-        color: white;
-        font-size: 18px;
+        color: var(--primary-text);
+        font-size: 16px;
         font-weight: 500;
         display: block;
         transition: 0.3s;
     }
     
     nav ul li a:hover {
-        color: #c00;
+        color: var(--button-bg);
     }
     
     .menu-open nav ul {
