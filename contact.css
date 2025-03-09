@@ -122,3 +122,117 @@ footer {
     background: #111;
     color: white;
 }
+/* Mobile-Friendly Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #222;
+        padding: 15px 0;
+        position: relative;
+    }
+    
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .menu-toggle {
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        background: none;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #333;
+        padding: 10px 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    nav ul li {
+        padding: 10px 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    nav ul li a:hover {
+        color: #c00;
+    }
+    
+    .menu-open nav ul {
+        display: flex;
+    }
+}
+
+/* Mobile-Responsive Contact Page */
+@media screen and (max-width: 768px) {
+    .contact-page {
+        padding: 30px 5%;
+    }
+    
+    .contact-page h2 {
+        font-size: 28px;
+    }
+    
+    .contact-page p {
+        font-size: 16px;
+    }
+    
+    form {
+        max-width: 90%;
+    }
+    
+    input, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .contact-info {
+        margin-top: 30px;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .contact-details p {
+        font-size: 16px;
+    }
+    
+    .social-icons a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
